@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "772142208939",
+    "firebase_url": "https://do-locks.firebaseio.com",
+    "project_id": "do-locks",
+    "storage_bucket": "do-locks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772142208939:android:a811fcab83bbee4c9b64ee",
+        "android_client_info": {
+          "package_name": "com.terahertz.do_locks_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772142208939-2t8trtntl0vaqn3ggbon0rdb05kjav6j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.terahertz.do_locks_admin",
+            "certificate_hash": "f2504f673902a1e05b2f167cb0e7fbe42e0a0230"
+          }
+        },
+        {
+          "client_id": "772142208939-1ij4p85u298hj8gpbhukk20g8crg5mja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcxO4PAvMWwYdqPqBnhCvaOvcE9R-Oiqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772142208939-1ij4p85u298hj8gpbhukk20g8crg5mja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
