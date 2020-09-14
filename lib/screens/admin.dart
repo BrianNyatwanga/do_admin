@@ -1,6 +1,12 @@
+import 'package:do_locks_admin/db/auth.dart';
+import 'package:do_locks_admin/helpers/common.dart';
 import 'package:do_locks_admin/helpers/style.dart';
+import 'package:do_locks_admin/screens/Lists/brand_list.dart';
+import 'package:do_locks_admin/screens/Lists/category_list.dart';
+import 'package:do_locks_admin/screens/Lists/products_list.dart';
 import 'package:do_locks_admin/screens/addprod.dart';
 import 'package:flutter/material.dart';
+
 //import 'package:fluttertoast/fluttertoast.dart';
 import '../db/category.dart';
 import '../db/brand.dart';
@@ -22,6 +28,8 @@ class _AdminState extends State<Admin> {
   GlobalKey<FormState> _brandFormKey = GlobalKey();
   BrandService _brandService = BrandService();
   CategoryService _categoryService = CategoryService();
+
+  final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +57,7 @@ class _AdminState extends State<Admin> {
                       icon: Icon(
                         Icons.sort,
                         color:
-                            _selectedPage == Page.manage ? active : notActive,
+                        _selectedPage == Page.manage ? active : notActive,
                       ),
                       label: Text('Manage'))),
             ],
@@ -199,7 +207,9 @@ class _AdminState extends State<Admin> {
             ListTile(
               leading: Icon(Icons.change_history),
               title: Text("Products list"),
-              onTap: () {},
+              onTap: () {
+                changeScreen(context, ProductList());
+              },
             ),
             Divider(),
             ListTile(
@@ -213,7 +223,9 @@ class _AdminState extends State<Admin> {
             ListTile(
               leading: Icon(Icons.category),
               title: Text("Category list"),
-              onTap: () {},
+              onTap: () {
+                changeScreen(context, CategoryList());
+              },
             ),
             Divider(),
             ListTile(
@@ -228,7 +240,7 @@ class _AdminState extends State<Admin> {
               leading: Icon(Icons.library_books),
               title: Text("brand list"),
               onTap: () {
-                _brandService.getBrands();
+                changeScreen(context, BrandList());
               },
             ),
             Divider(),
@@ -238,8 +250,10 @@ class _AdminState extends State<Admin> {
                 color: red,
               ),
               title: Text("Logout"),
-              onTap: () {
-                _brandService.getBrands();
+              onTap: () async {
+                await _auth.signOut();
+                Navigator.pop(context);
+                print('signed out');
               },
             ),
             Divider(),
