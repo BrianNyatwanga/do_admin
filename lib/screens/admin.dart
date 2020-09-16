@@ -1,10 +1,10 @@
 import 'package:do_locks_admin/db/auth.dart';
 import 'package:do_locks_admin/helpers/common.dart';
 import 'package:do_locks_admin/helpers/style.dart';
-import 'package:do_locks_admin/screens/Lists/brand_list.dart';
 import 'package:do_locks_admin/screens/Lists/category_list.dart';
 import 'package:do_locks_admin/screens/Lists/products_list.dart';
 import 'package:do_locks_admin/screens/addprod.dart';
+import 'package:do_locks_admin/screens/brands.dart';
 import 'package:flutter/material.dart';
 
 //import 'package:fluttertoast/fluttertoast.dart';
@@ -57,7 +57,7 @@ class _AdminState extends State<Admin> {
                       icon: Icon(
                         Icons.sort,
                         color:
-                        _selectedPage == Page.manage ? active : notActive,
+                            _selectedPage == Page.manage ? active : notActive,
                       ),
                       label: Text('Manage'))),
             ],
@@ -97,7 +97,7 @@ class _AdminState extends State<Admin> {
                     crossAxisCount: 2),
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.all(18.0),
+                    padding: const EdgeInsets.all(4.0),
                     child: Card(
                       child: ListTile(
                           title: FlatButton.icon(
@@ -112,7 +112,7 @@ class _AdminState extends State<Admin> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(18.0),
+                    padding: const EdgeInsets.all(4.0),
                     child: Card(
                       child: ListTile(
                           title: FlatButton.icon(
@@ -127,7 +127,7 @@ class _AdminState extends State<Admin> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(22.0),
+                    padding: const EdgeInsets.all(4.0),
                     child: Card(
                       child: ListTile(
                           title: FlatButton.icon(
@@ -142,7 +142,7 @@ class _AdminState extends State<Admin> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(22.0),
+                    padding: const EdgeInsets.all(4.0),
                     child: Card(
                       child: ListTile(
                           title: FlatButton.icon(
@@ -157,7 +157,7 @@ class _AdminState extends State<Admin> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(22.0),
+                    padding: const EdgeInsets.all(4.0),
                     child: Card(
                       child: ListTile(
                           title: FlatButton.icon(
@@ -172,7 +172,7 @@ class _AdminState extends State<Admin> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(22.0),
+                    padding: const EdgeInsets.all(4.0),
                     child: Card(
                       child: ListTile(
                           title: FlatButton.icon(
@@ -216,7 +216,7 @@ class _AdminState extends State<Admin> {
               leading: Icon(Icons.add_circle),
               title: Text("Add category"),
               onTap: () {
-                _categoryAlert();
+                categoryAlert();
               },
             ),
             Divider(),
@@ -232,7 +232,7 @@ class _AdminState extends State<Admin> {
               leading: Icon(Icons.add_circle_outline),
               title: Text("Add brand"),
               onTap: () {
-                _brandAlert();
+                brandAlert();
               },
             ),
             Divider(),
@@ -240,7 +240,7 @@ class _AdminState extends State<Admin> {
               leading: Icon(Icons.library_books),
               title: Text("brand list"),
               onTap: () {
-                changeScreen(context, BrandList());
+                changeScreen(context, Brands());
               },
             ),
             Divider(),
@@ -265,7 +265,7 @@ class _AdminState extends State<Admin> {
     }
   }
 
-  void _categoryAlert() {
+  categoryAlert() {
     var alert = new AlertDialog(
       content: Form(
         key: _categoryFormKey,
@@ -301,7 +301,7 @@ class _AdminState extends State<Admin> {
     showDialog(context: context, builder: (_) => alert);
   }
 
-  void _brandAlert() {
+  brandAlert() {
     var alert = new AlertDialog(
       content: Form(
         key: _brandFormKey,

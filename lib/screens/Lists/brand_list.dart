@@ -1,4 +1,7 @@
+import 'package:do_locks_admin/models/brands.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:do_locks_admin/db/brand.dart';
 
 class BrandList extends StatefulWidget {
   @override
@@ -8,6 +11,9 @@ class BrandList extends StatefulWidget {
 class _BrandListState extends State<BrandList> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    //final brands = Provider.of<List<Brand>>(context) ?? [];
+    return Container(
+        //getBrands().toString()
+        );
   }
 }
