@@ -1,4 +1,4 @@
-import 'package:do_locks_admin/db/auth.dart';
+import 'package:do_locks_admin/services/auth.dart';
 import 'package:do_locks_admin/helpers/common.dart';
 import 'package:do_locks_admin/helpers/style.dart';
 import 'package:do_locks_admin/screens/Lists/category_list.dart';
@@ -8,8 +8,8 @@ import 'package:do_locks_admin/screens/brands.dart';
 import 'package:flutter/material.dart';
 
 //import 'package:fluttertoast/fluttertoast.dart';
-import '../db/category.dart';
-import '../db/brand.dart';
+import '../services/category.dart';
+import '../services/brand.dart';
 
 enum Page { dashboard, manage }
 

@@ -5,11 +5,11 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:do_locks_admin/db/product.dart';
+import 'package:do_locks_admin/services/product.dart';
 import 'package:provider/provider.dart';
 import 'package:do_locks_admin/providers/products_provider.dart';
-import '../db/category.dart';
-import '../db/brand.dart';
+import '../services/category.dart';
+import '../services/brand.dart';
 
 class AddProduct extends StatefulWidget {
   @override

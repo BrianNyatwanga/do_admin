@@ -1,6 +1,6 @@
 import 'package:do_locks_admin/helpers/loading.dart';
 import 'package:do_locks_admin/helpers/style.dart';
-import 'package:do_locks_admin/db/auth.dart';
+import 'package:do_locks_admin/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

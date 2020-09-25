@@ -5,7 +5,7 @@ import 'package:do_locks_admin/providers/products_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-import 'db/auth.dart';
+import 'services/auth.dart';
 import 'models/user.dart';
 
 void main() async {

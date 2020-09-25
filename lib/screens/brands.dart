@@ -1,4 +1,4 @@
-import 'package:do_locks_admin/db/brand.dart';
+import 'package:do_locks_admin/services/brand.dart';
 import 'package:do_locks_admin/helpers/style.dart';
 import 'package:do_locks_admin/screens/Lists/brand_list.dart';
 import 'package:flutter/material.dart';
